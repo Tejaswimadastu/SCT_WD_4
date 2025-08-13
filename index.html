@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>FocusDo — Competition To-Do</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">⚡ FocusDo</div>
+  <div class="search-wrap">
+    <input id="search" placeholder="Search tasks or #tags">
+    <button id="focusToggle" aria-pressed="false" title="Focus mode">Focus</button>
+    <button id="notifyBtn" title="Enable reminders">🔔</button>
+    <button id="micBtn" title="Voice add">🎤</button>
+  </div>
+  <div class="stats">
+    <div class="progress">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <div class="stat-items">
+      <span id="progressText">0%</span>
+      <span id="streakText">Streak: 0🔥</span>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="sidebar">
+    <h3>Lists</h3>
+    <div id="lists"></div>
+    <div class="add-list">
+      <input id="newListName" placeholder="New list">
+      <input id="newListColor" type="color" value="#6c5ce7">
+      <button id="addListBtn">Add</button>
+    </div>
+    <section class="calendar">
+      <div class="cal-header">
+        <button id="prevMonth">‹</button>
+        <div id="calTitle"></div>
+        <button id="nextMonth">›</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+      <button id="clearDateFilter" class="ghost">Clear date filter</button>
+    </section>
+  </aside>
+
+  <section class="board">
+    <div class="task-form">
+      <input id="title" placeholder="Task title">
+      <input id="dueDate" type="date">
+      <input id="dueTime" type="time">
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <select id="taskList"></select>
+      <input id="tags" placeholder="#tags comma separated">
+      <select id="dependency"></select>
+      <input id="desc" placeholder="Description">
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+    <div id="boardColumns" class="columns"></div>
+  </section>
+</main>
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
