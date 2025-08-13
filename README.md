@@ -25,10 +25,6 @@ SCT_WD_4/
 │── app.js # Core JavaScript logic
 │── icons/ # App icons
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🛠️ Tech Stack
@@ -56,8 +52,7 @@ Branch: main → folder: / (root) → Save
 Your app will be live in seconds.
 
 📸 Screenshots
-Output.png
-
+![Output](Output.png)
 🏆 Competition Notes
 Designed with a clean, modern UI
 
